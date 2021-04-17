@@ -11,25 +11,25 @@ const App = () => {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      taskTitle: "Doctors Appointment",
-      taskDescription: "Go to Hospital",
-      reminder: true,
+      taskTitle: "Welcome!",
+      taskDescription: "This is a fucking web pad",
+      reminder: false,
       startDates: "4/12/2021, 7:05 PM",
 
     },
     {
       id: 2,
-      taskTitle: "Meeting at School",
-      taskDescription: "Go to School",
-      reminder: true,
+      taskTitle: "You can add task",
+      taskDescription: "but it does not mean you need to do it ahah",
+      reminder: false,
       startDates: "4/13/2021, 4:07 PM",
 
     },
     {
       id: 3,
-      taskTitle: "Food Shopping",
-      taskDescription: "Go to Super Market",
-      reminder: false,
+      taskTitle: "Turn on reminder",
+      taskDescription: "by double tapping a task",
+      reminder: true,
       startDates: "4/14/2021, 4:05 PM",
     },
   ])
