@@ -22,10 +22,10 @@ const Task = ({ task, onDelete, onToggle }) => {
       </div>
 
       <div className="flex">
-        <h4 className="inline-block w-9/12 text-xs italic font-bold text-gray-400">
+        <h4 className="inline-block w-6/12 text-xs italic font-bold text-gray-400">
           {task.startDates}
         </h4>
-        <span className="w-3/12 text-xs font-semibold text-right text-blue-500 uppercase justify-self-end ">
+        <span className="w-6/12 text-xs font-semibold text-right text-blue-500 uppercase justify-self-end ">
           {task.reminder ? "Reminder On" : ""}
         </span>
       </div>
