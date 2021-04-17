@@ -52,7 +52,7 @@ const App = () => {
     )
   }
   return (
-    <div className="grid min-h-screen p-4 text-gray-800 bg-gray-900 select-none place-items-center">
+    <div className="grid items-start min-h-screen p-4 text-gray-800 bg-gray-900 select-none place-items-center">
       <div className="w-full bg-gray-800 shadow-lg rounded-xl rounded-t-2xl md:w-9/12 lg:w-6/12">
         <Header onAdd={()=> setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
 

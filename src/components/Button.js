@@ -4,7 +4,7 @@ const Button = ({ color, text, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className={`inline-block px-4 py-2 text-gray-200 transition rounded  focus:outline-none ${color} active:bg-gray-500 transform active:scale-105 shadow-md `}
+      className={`inline-block p-2 text-gray-200 transition rounded-full  focus:outline-none ${color} transform active:scale-110 shadow-md text-xl`}
     >
       {text}
     </button>

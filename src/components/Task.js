@@ -3,7 +3,7 @@ import { FaRegTrashAlt } from "react-icons/fa";
 const Task = ({ task, onDelete, onToggle }) => {
   return (
     <div
-      className={`p-2 bg-gray-100 border-l-8 shadow-md rounded-md ${
+      className={`p-2 bg-gray-100 border-l-8 shadow-lg rounded-md ${
         task.reminder ? "border-blue-400 " : "border-transparent"
       }`}
       onDoubleClick={() => onToggle(task.id)}
