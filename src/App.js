@@ -38,6 +38,7 @@ const App = () => {
     const id = Math.floor(Math.random() * 10000) + 1
     const newTask = {id, ...task}
     setTasks([newTask, ...tasks])
+    setShowAddTask(false)
   } 
 
   // Delete task
