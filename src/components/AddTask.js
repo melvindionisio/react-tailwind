@@ -15,10 +15,7 @@ const AddTask = ({ onAdd }) => {
       alert("Please add Task");
       return;
     }
-    /*  if(!day){
-      setDasetDescription('no date')
-      return
-    } */
+
     const startDates = startDate.toLocaleString();
 
     onAdd({ taskTitle, taskDescription, startDates, reminder });
@@ -49,7 +46,7 @@ const AddTask = ({ onAdd }) => {
           name="taskTitle"
           id="taskTitle"
           type="text"
-          autocomplete="off"
+          autoComplete="off"
           placeholder="Task Title"
           value={taskTitle}
           onChange={(e) => setTitle(e.target.value)}

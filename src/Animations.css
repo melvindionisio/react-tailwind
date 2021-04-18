@@ -6,6 +6,10 @@
   animation: fade-in 350ms linear;
 }
 
+.fade-out {
+  animation: fade-out 350ms linear;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -21,5 +25,14 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

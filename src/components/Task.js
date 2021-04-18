@@ -8,7 +8,7 @@ const Task = ({ task, onDelete, onToggle }) => {
       }`}
       onDoubleClick={() => onToggle(task.id)}
     >
-      <h3 className="flex items-center justify-between text-xl font-normal truncate">
+      <h3 className="flex items-center justify-between w-full text-xl font-normal">
         {task.taskTitle}
         <FaRegTrashAlt
           style={{ color: "red", cursor: "pointer" }}
@@ -17,7 +17,7 @@ const Task = ({ task, onDelete, onToggle }) => {
       </h3>
       <div className="flex">
         <h4 className="inline-block w-9/12 text-base font-light">
-          {task.taskDescription}{" "}
+          {task.taskDescription}
         </h4>
       </div>
 
