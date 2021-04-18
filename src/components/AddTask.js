@@ -27,6 +27,14 @@ const AddTask = ({ onAdd }) => {
     setDescription("");
     setReminder(false);
   };
+
+  let timeStyle = () => {
+    return "bg-gray-200 transition";
+  };
+  let dayStyle = () => {
+    return "bg-gray-200 rounded-full hover:bg-green-400 transition";
+  };
+
   return (
     <form
       className="flex flex-col p-4 space-y-4 font-semibold text-gray-400"
@@ -37,7 +45,7 @@ const AddTask = ({ onAdd }) => {
           Title
         </label>
         <input
-          className="p-2 mt-2 text-gray-800 transition rounded bg-green-50 focus:ring-4 focus:ring-blue-400 focus:outline-none"
+          className="p-2 mt-2 text-gray-800 transition rounded bg-blue-50 focus:ring-4 focus:ring-blue-400 focus:outline-none"
           name="taskTitle"
           id="taskTitle"
           type="text"
@@ -52,7 +60,7 @@ const AddTask = ({ onAdd }) => {
           Task
         </label>
         <textarea
-          className="p-2 mt-2 text-gray-800 transition rounded resize-none bg-green-50 focus:ring-4 focus:ring-blue-400 focus:outline-none"
+          className="p-2 mt-2 text-gray-800 transition rounded resize-none bg-blue-50 focus:ring-4 focus:ring-blue-400 focus:outline-none"
           name="task"
           id="task"
           rows="3"
@@ -70,13 +78,17 @@ const AddTask = ({ onAdd }) => {
         /> */}
       </div>
       <div className="flex flex-col">
-        <label>Date & Time</label>
+        <label htmlFor="date">Date & Time</label>
         <DatePicker
-          style={{ cursor: "pointer" }}
           selected={startDate}
           onChange={(date) => setStartDate(date)}
           showTimeSelect
           dateFormat="Pp"
+          timeClassName={timeStyle}
+          dayClassName={dayStyle}
+          className="p-2 pr-0 mt-2 text-gray-500 rounded cursor-pointer bg-blue-50 focus:outline-none focus:ring-4 ring-blue-400 "
+          name="date"
+          id="date"
         />
       </div>
       <div className="flex items-center space-x-4">

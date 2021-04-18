@@ -1,10 +1,11 @@
-//import "./App.css";
+import "./Animations.css";
 import React from 'react'
 import { useState } from "react"
 import Header from "./components/Header"
 import Tasks from "./components/Tasks"
-// import Footer from "./components/Footer"
 import AddTask from "./components/AddTask"
+// import Footer from "./components/Footer"
+
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -33,6 +34,7 @@ const App = () => {
       startDates: "4/14/2021, 4:05 PM",
     },
   ])
+  
   // Add Task
   const addTask = (task) => {
     const id = Math.floor(Math.random() * 10000) + 1
