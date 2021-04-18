@@ -9,7 +9,7 @@ import AddTask from "./components/AddTask"
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false)
-  const [tasks, setTasks] = useState([
+  const [tasks, setTasks] = useState(() => [
     {
       id: 1,
       taskTitle: "Welcome!",
@@ -21,7 +21,7 @@ const App = () => {
     {
       id: 2,
       taskTitle: "You can add task",
-      taskDescription: "but it does not mean you need to do it ahah",
+      taskDescription: "but it doesn't mean you should do it ahah",
       reminder: false,
       startDates: "4/13/2021, 4:07 PM",
 
@@ -46,9 +46,7 @@ const App = () => {
     webpad.current.classList.add('fade-in')
     setTimeout(()=> {
       webpad.current.classList.contains('fade-in') && webpad.current.classList.remove('fade-in') 
-
-    },500)
-    console.log(webpad)
+    },500);
   } 
 
   // Delete task
@@ -65,11 +63,13 @@ const App = () => {
   return (
     <div className="grid items-start min-h-screen p-4 text-gray-800 bg-gray-900 select-none place-items-center" >
       <div className="w-full bg-gray-800 shadow-lg rounded-xl rounded-t-2xl md:w-9/12 lg:w-6/12" ref={webpad} >
-        <Header onAdd={()=> setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
-
-        {showAddTask && <AddTask onAdd={addTask} />}
         
-       <Tasks tasks={ tasks } onDelete={deleteTask} onToggle={toggleReminder} />
+        <Header 
+        onAdd={()=> setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
+
+        { showAddTask && <AddTask onAdd={addTask} /> }
+        
+        <Tasks tasks={ tasks } onDelete={deleteTask} onToggle={toggleReminder} />
        
         {/* <Footer /> */}
 

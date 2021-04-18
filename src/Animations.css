@@ -3,11 +3,11 @@
 }
 
 .fade-in {
-  animation: fade-in 350ms linear;
+  animation: fade-in 350ms ease-out;
 }
 
 .fade-out {
-  animation: fade-out 350ms linear;
+  animation: fade-out 350ms ease-out;
 }
 
 @keyframes spin {
@@ -22,9 +22,11 @@
 @keyframes fade-in {
   from {
     opacity: 0;
+    transform: translateY(15%);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
