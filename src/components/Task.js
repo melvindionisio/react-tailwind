@@ -1,4 +1,5 @@
 import { FaRegTrashAlt } from "react-icons/fa";
+import React from "react";
 
 const Task = ({ task, onDelete, onToggle }) => {
   return (
@@ -7,6 +8,7 @@ const Task = ({ task, onDelete, onToggle }) => {
         task.reminder ? "border-blue-400 " : "border-transparent"
       }`}
       onDoubleClick={() => onToggle(task.id)}
+      // ref={ref}
     >
       <h3 className="flex items-center justify-between w-full text-xl font-normal">
         {task.taskTitle}

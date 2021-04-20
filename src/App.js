@@ -35,6 +35,9 @@ const App = () => {
     },
   ])
   const webpad = useRef(null)
+  const taskRef = React.createRef(null);
+
+
   
   // Add Task
   const addTask = (task) => {
@@ -46,6 +49,13 @@ const App = () => {
     webpad.current.classList.add('fade-in')
     setTimeout(()=> {
       webpad.current.classList.contains('fade-in') && webpad.current.classList.remove('fade-in') 
+    },500);
+
+    const refTask = taskRef.current
+    refTask.classList.add('bubble');
+    console.log(refTask)
+    setTimeout(()=> {
+      refTask.classList.contains('bubble') && refTask.classList.remove('bubble') 
     },500);
   } 
 
@@ -62,14 +72,16 @@ const App = () => {
   }
   return (
     <div className="grid items-start min-h-screen p-4 text-gray-800 bg-gray-900 select-none place-items-center" >
-      <div className="w-full bg-gray-800 shadow-lg rounded-xl rounded-t-2xl md:w-9/12 lg:w-6/12" ref={webpad} >
+      <div className="w-full bg-gray-800 shadow-lg rounded-xl rounded-t-2xl md:w-9/12 lg:w-6/12" 
+      ref={webpad} 
+      >
         
         <Header 
         onAdd={()=> setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
 
-        { showAddTask && <AddTask onAdd={addTask} /> }
+        { showAddTask && <AddTask  onAdd={addTask} /> }
         
-        <Tasks tasks={ tasks } onDelete={deleteTask} onToggle={toggleReminder} />
+        <Tasks ref={taskRef} tasks={ tasks } onDelete={deleteTask} onToggle={toggleReminder} />
        
         {/* <Footer /> */}
 

@@ -9,6 +9,21 @@
 .fade-out {
   animation: fade-out 350ms ease-out;
 }
+.bubble {
+  animation: bubble 750ms ease-out;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(10vh);
+  }
+  35% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 @keyframes spin {
   from {
