@@ -3,14 +3,14 @@
 }
 
 .fade-in {
-  animation: fade-in 450ms ease-out;
+  animation: fade-in 350ms ease-out;
 }
 
 .fade-out {
   animation: fade-out 350ms ease-out;
 }
 .bubble {
-  animation: fade-in 650ms ease;
+  animation: fade-in 550ms ease;
 }
 
 @keyframes bubble {
