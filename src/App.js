@@ -80,8 +80,9 @@ const App = () => {
         onAdd={()=> setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
 
         { showAddTask && <AddTask  onAdd={addTask} /> }
-        
-        <Tasks ref={taskRef} tasks={ tasks } onDelete={deleteTask} onToggle={toggleReminder} />
+        <div>
+           <Tasks ref={taskRef} tasks={ tasks } onDelete={deleteTask} onToggle={toggleReminder} />
+        </div>
        
         {/* <Footer /> */}
 
