@@ -4,7 +4,6 @@ import { useState, useRef } from "react"
 import Header from "./components/Header"
 import Tasks from "./components/Tasks"
 import AddTask from "./components/AddTask"
-// import Footer from "./components/Footer"
 
 
 const App = () => {
@@ -34,7 +33,7 @@ const App = () => {
       startDates: "4/14/2021, 4:05 PM",
     },
   ])
-  const webpad = useRef(null)
+  const webpad = useRef(null);
   const taskRef = React.createRef(null);
 
 
@@ -49,9 +48,10 @@ const App = () => {
     webpad.current.classList.add('fade-in')
     setTimeout(()=> {
       webpad.current.classList.contains('fade-in') && webpad.current.classList.remove('fade-in') 
-    },500);
+    },550);
 
-    const refTask = taskRef.current
+  
+    const refTask = taskRef.current;  
     refTask.classList.add('bubble');
     console.log(refTask)
     setTimeout(()=> {
@@ -61,6 +61,12 @@ const App = () => {
 
   // Delete task
   const deleteTask = (id) => {
+    /* const refTask = taskRef.current;
+    refTask.classList.add('fade-in-out')
+    setTimeout(()=> {
+      refTask.classList.contains('fade-in-out') && refTask.classList.remove('fade-in-out') 
+    },500); */
+    
     setTasks(tasks.filter((task)=> task.id !== id))
   }
 
@@ -84,8 +90,6 @@ const App = () => {
            <Tasks ref={taskRef} tasks={ tasks } onDelete={deleteTask} onToggle={toggleReminder} />
         </div>
        
-        {/* <Footer /> */}
-
       </div>
     </div>
   );

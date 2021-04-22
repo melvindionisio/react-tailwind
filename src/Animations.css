@@ -9,6 +9,12 @@
 .fade-out {
   animation: fade-out 350ms ease-out;
 }
+.fade-in-out {
+  animation: fade-in-out 500ms ease-in;
+}
+.scale-in-out {
+  animation: scale-in-out 500ms ease;
+}
 .bubble {
   animation: fade-in 550ms ease;
 }
@@ -48,5 +54,28 @@
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes scale-in-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fade-in-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
