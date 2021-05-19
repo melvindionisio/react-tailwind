@@ -2,7 +2,7 @@ import Task from "./Task";
 import React from "react";
 
 const Tasks = React.forwardRef(({ tasks, onDelete, onToggle }, ref) => (
-  <div
+    <div
     className="p-4 space-y-4 transition bg-gradient-to-br from-pink-600 to-yellow-300 rounded-xl rounded-t-2xl"
     ref={ref}
   >

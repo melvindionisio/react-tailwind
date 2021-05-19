@@ -4,8 +4,8 @@ import { FaTimes } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 
 const Header = ({ title, onAdd, showAdd }) => {
-  return (
-    <header className="flex items-center justify-between p-6 text-gray-200">
+    return (
+      <header className="flex items-center justify-between p-6 text-gray-200">
       <h1 className="text-3xl font-bold text-transparent bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text">
         {title}
       </h1>
@@ -16,13 +16,13 @@ const Header = ({ title, onAdd, showAdd }) => {
         onClick={onAdd}
       />
     </header>
-  );
+    );
 };
 
 Header.defaultProps = {
-  title: "Web Pad",
+    title: "Web Pad",
 };
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 };
 export default Header;

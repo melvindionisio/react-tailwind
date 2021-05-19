@@ -3,37 +3,37 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const AddTask = ({ onAdd }) => {
-  const [taskTitle, setTitle] = useState("");
-  const [taskDescription, setDescription] = useState("");
-  const [reminder, setReminder] = useState(false);
-  const [startDate, setStartDate] = useState(new Date());
+    const [taskTitle, setTitle] = useState("");
+    const [taskDescription, setDescription] = useState("");
+    const [reminder, setReminder] = useState(false);
+    const [startDate, setStartDate] = useState(new Date());
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+    const onSubmit = (e) => {
+        e.preventDefault();
 
-    if (!taskTitle) {
-      alert("Please add Task");
-      return;
-    }
+        if (!taskTitle) {
+            alert("Please add Task");
+            return;
+        }
 
-    const startDates = startDate.toLocaleString();
+        const startDates = startDate.toLocaleString();
 
-    onAdd({ taskTitle, taskDescription, startDates, reminder });
+        onAdd({ taskTitle, taskDescription, startDates, reminder });
 
-    setTitle("");
-    setDescription("");
-    setReminder(false);
-  };
+        setTitle("");
+        setDescription("");
+        setReminder(false);
+    };
 
-  let timeStyle = () => {
-    return "bg-gray-200 transition";
-  };
-  let dayStyle = () => {
-    return "bg-gray-200 rounded-full hover:bg-green-400 transition";
-  };
+    let timeStyle = () => {
+        return "bg-gray-200 transition";
+    };
+    let dayStyle = () => {
+        return "bg-gray-200 rounded-full hover:bg-green-400 transition";
+    };
 
-  return (
-    <form
+    return (
+        <form
       className="flex flex-col p-4 space-y-4 font-semibold text-gray-400"
       onSubmit={onSubmit}
     >
@@ -108,7 +108,7 @@ const AddTask = ({ onAdd }) => {
         value="Save Task"
       />
     </form>
-  );
+    );
 };
 
 export default AddTask;
